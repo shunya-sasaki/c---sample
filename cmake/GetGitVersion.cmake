@@ -2,6 +2,9 @@ function(get_git_version OUT_VERSION)
     # Set a default version
     set(DEFAULT_VERSION "0.0.0")
 
+    # Check if git command is available
+    find_package(Git QUIET)
+
     # Try to get the latest Git tag
     execute_process(
         COMMAND git describe --tags --abbrev=0
