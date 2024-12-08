@@ -1,9 +1,15 @@
+#ifndef VERSION
+#define VERSION "unknown"
+#endif
+
 #include <iostream>
 #include <memory>
 #include "parent.h"
 
+
 int main(int argc, char const *argv[])
 {
+    std::cout << "Project version: " << VERSION << std::endl;
     // deault constructor
     std::cout << "default constructor" << std::endl;
     Parent parent;
